@@ -26,7 +26,7 @@
     <!-- 开启注解 -->
     <mvc:annotation-driven/>
 
-    <import resource="applicationContext-config.xml"/>
+    <import resource="classpath*:applicationContext-config.xml"/>
     <import resource="classpath*:applicationContext-servlet.xml"/>
     <import resource="classpath*:applicationContext-datasource.xml"/>
 

@@ -6,19 +6,17 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
- * @author mgcele on 2017/4/26.
- *
- * 测试类
+ * @author mgcele on 2017/4/29.
  */
 @Controller
-public class TestController {
+public class LoginController {
 
     /**
-     * 测试
+     * 登陆页面
      */
-    @RequestMapping(value = "/test", method = RequestMethod.GET)
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
     public ModelAndView test(ModelAndView modelAndView){
-        modelAndView.setViewName("/test/index");
+        modelAndView.setViewName("/login/login");
         return modelAndView;
     }
 
