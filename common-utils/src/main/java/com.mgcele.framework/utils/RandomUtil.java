@@ -20,7 +20,11 @@ public class RandomUtil {
     public static int randomInt(int min, int max)
     {
         Random rand = new Random();
-        int tmp = Math.abs(rand.nextInt());
+        Integer temp = rand.nextInt();
+        if(temp.equals(Integer.MIN_VALUE)){
+            temp += 1;
+        }
+        int tmp = Math.abs(temp);
         return tmp % (max - min + 1) + min;
     }
 

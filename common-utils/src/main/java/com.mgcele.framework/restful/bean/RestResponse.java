@@ -1,5 +1,7 @@
 package com.mgcele.framework.restful.bean;
 
+import java.util.Arrays;
+
 /**
  * @author mgcele on 2017/4/29.
  */
@@ -78,7 +80,7 @@ public class RestResponse<T> {
         public Meta(String retCode, String[] msgs)
         {
             this.retCode = retCode;
-            this.msgs = msgs;
+            this.msgs = Arrays.copyOf(msgs, msgs.length);
         }
 
         public String getRetCode()
@@ -88,12 +90,12 @@ public class RestResponse<T> {
 
         public String[] getMsgs()
         {
-            return this.msgs;
+            return Arrays.copyOf(this.msgs, this.msgs.length);
         }
 
         public void setMsgs(String[] msgs)
         {
-            this.msgs = msgs;
+            this.msgs = Arrays.copyOf(msgs, msgs.length);
         }
 
         public boolean isFilterExcluded()

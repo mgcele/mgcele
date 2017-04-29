@@ -3,6 +3,8 @@ package com.mgcele.framework.exception;
 
 import com.mgcele.framework.exception.base.AbstractNestedBizException;
 
+import java.util.Arrays;
+
 /**
  * @author mgcele on 2017/4/29.
  */
@@ -24,18 +26,18 @@ public class BaseException extends AbstractNestedBizException {
     public BaseException(String code, Object[] params, String msg)
     {
         this(code, msg);
-        this.params = params;
+        this.params = Arrays.copyOf(params, params.length);
     }
 
     public BaseException(String code, Object[] params, String msg, Throwable e)
     {
         this(code, msg, e);
-        this.params = params;
+        this.params = Arrays.copyOf(params, params.length);
     }
 
     public Object[] getParams()
     {
-        return this.params;
+        return Arrays.copyOf(this.params, this.params.length);
     }
 
 }

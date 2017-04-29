@@ -3,6 +3,8 @@ package com.mgcele.framework.exception;
 
 import com.mgcele.framework.exception.base.AbstractNestedRuntimeException;
 
+import java.util.Arrays;
+
 /**
  * @author mgcele on 2017/4/29.
  */
@@ -114,7 +116,7 @@ public class BaseRTException extends AbstractNestedRuntimeException {
 
     public Object[] getMessageArgs()
     {
-        return this.messageArgs;
+        return Arrays.copyOf(this.messageArgs, this.messageArgs.length);
     }
 
     public void setMessageArgs(Object[] messageArgs)

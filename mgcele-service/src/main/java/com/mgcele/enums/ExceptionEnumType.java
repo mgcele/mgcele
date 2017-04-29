@@ -28,7 +28,7 @@ public enum ExceptionEnumType implements ConvertableEnum<Integer, ExceptionEnumT
     }
 
     public Integer getCode(){
-        return this.getCode();
+        return code;
     }
 
     public ExceptionEnumType getEnumByCode(Integer code){

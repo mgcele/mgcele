@@ -84,18 +84,18 @@ public class User implements Serializable {
     }
 
     public Date getCreateTime() {
-        return createTime;
+        return (Date) createTime.clone();
     }
 
     public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
+        this.createTime = (Date) createTime.clone();
     }
 
     public Date getUpdateTime() {
-        return updateTime;
+        return (Date) updateTime.clone();
     }
 
     public void setUpdateTime(Date updateTime) {
-        this.updateTime = updateTime;
+        this.updateTime = (Date) updateTime.clone();
     }
 }

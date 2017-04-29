@@ -28,7 +28,7 @@ public enum YesOrNo implements ConvertableEnum<Integer, YesOrNo>{
     }
 
     public Integer getCode(){
-        return this.getCode();
+        return code;
     }
 
     public YesOrNo getEnumByCode(Integer code){
