@@ -15,8 +15,17 @@ public class LoginController {
      * 登陆页面
      */
     @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public ModelAndView test(ModelAndView modelAndView){
+    public ModelAndView login(ModelAndView modelAndView){
         modelAndView.setViewName("/login/login");
+        return modelAndView;
+    }
+
+    /**
+     * 登陆页面
+     */
+    @RequestMapping(value = "/mlogin", method = RequestMethod.GET)
+    public ModelAndView mlogin(ModelAndView modelAndView){
+        modelAndView.setViewName("/login/mlogin");
         return modelAndView;
     }
 
