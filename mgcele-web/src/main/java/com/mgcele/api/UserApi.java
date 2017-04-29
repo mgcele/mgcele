@@ -25,9 +25,9 @@ import javax.annotation.Resource;
  */
 @Controller
 @RequestMapping("/user")
-public class WebUserApi extends BaseRestController {
+public class UserApi extends BaseRestController {
 
-    private Logger logger = LoggerFactory.getLogger(WebUserApi.class);
+    private Logger logger = LoggerFactory.getLogger(UserApi.class);
 
     @Resource(name = "userService")
     private UserService userService;
