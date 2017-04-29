@@ -29,7 +29,7 @@
     #Banner .conn_left{float:left;width:3px;height:170px;background:#208DE1}
     #Banner .conn_img {margin-top:164px;}
     #Banner .index_banner {float:left;background:#208DE1;width:216px;height:170px;}
-    #Banner .index_bg {float:left;background:url(img/index_login_bg.gif) repeat-y;width:280px;height:145px!important; height /**/: 170px;padding:25px 0 0 4px;font:normal 12px tahoma;line-height:24px;text-align:left;color:#2A58A6;}
+    #Banner .index_bg {float:left;background:url(${base}/cdn/img/index_login_bg.gif) repeat-y;width:280px;height:145px!important; height /**/: 170px;padding:25px 0 0 4px;font:normal 12px tahoma;line-height:24px;text-align:left;color:#2A58A6;}
     #Banner .color {clear:both;width:503px;height:16px;background:#D4ECFF;border-top:2px solid #fff;}
     #Banner ul {list-style:none;margin:12px 0 0 6px;}
     #Banner ul li {text-align:left;height:48px;}
@@ -40,7 +40,7 @@
     .left {float:left;}
     .right {float:right;}
     #Login {width:255px;float:left;font-family:tahoma;color:#494949}
-    #Login .top {height:4px;background:url(img/login_top_bg.gif) repeat-x;}
+    #Login .top {height:4px;background:url(${base}/cdn/img/login_top_bg.gif) repeat-x;}
     #Login .login_bg {height:310px;background:#F6F6F6;border-right:1px solid #8A8A8A;border-left:1px solid #8A8A8A;}
     #Login .lg_title {text-align:left;height:23px;margin:0 11px 0px 11px;padding-top:3px;padding-left:4px;border-bottom:1px solid #B5B5B5;}
     #Login .lg_title1 {text-align:left;margin:5px 11px;padding-top:3px;padding-left:4px;border-bottom:1px solid #B5B5B5;}
@@ -50,7 +50,7 @@
     #Login .input_vc {text-align:left;margin:6px 0 0 14px;}
     #Login .input_post {text-align:left;margin:8px 0 0 75px;}
     #Login .input_fpwd {text-align:left;margin:5px 0 0 32px;}
-    #Login .bottom {height:4px;background:url(img/login_bottom_bg.gif) repeat-x;}
+    #Login .bottom {height:4px;background:url(${base}/cdn/img/login_bottom_bg.gif) repeat-x;}
     #Login .intro_txt {color:#959595;text-align:left;margin-left:62px;}
     #Login .txt3 {text-align:left;margin:10px 0 0 22px; clear:both}
     .input_n {width:110px;height:15px !important; height /**/:20px;border-style:inset;padding:2px 0 0 2px;font:normal 12px tahoma;}
