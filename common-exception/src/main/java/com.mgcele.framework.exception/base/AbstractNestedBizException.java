@@ -6,6 +6,8 @@ import com.mgcele.framework.exception.utils.CommonExceptionUtils;
 import com.mgcele.framework.exception.utils.ExceptionTraceIdGenerator;
 import com.mgcele.framework.system.SystemProperty;
 
+import static java.lang.Long.*;
+
 /**
  * @author mgcele on 2017/4/29.
  */
@@ -22,7 +24,7 @@ public class AbstractNestedBizException extends Exception implements Traceable, 
     {
         super(msg);
         this.code = (SystemProperty.getInstance().getSysName() + code);
-        this.timestamp = Long.valueOf(System.currentTimeMillis());
+        this.timestamp = valueOf(System.currentTimeMillis());
         this.parent = null;
         this.cause = null;
         this.traceId = ExceptionTraceIdGenerator.getInstance().getTraceId();
@@ -38,14 +40,14 @@ public class AbstractNestedBizException extends Exception implements Traceable, 
         if ((e instanceof Traceable))
         {
             this.parent = ((Traceable)e);
-            this.timestamp = Long.valueOf(((Traceable)e).getTimestamp());
+            this.timestamp = valueOf(((Traceable)e).getTimestamp());
             this.traceId = getTraceId();
             this.rootExceptionInfo = ((Traceable)e).getRootExceptionInfo();
         }
         else
         {
             this.parent = null;
-            this.timestamp = Long.valueOf(System.currentTimeMillis());
+            this.timestamp = valueOf(System.currentTimeMillis());
             this.traceId = getTraceId();
             this.rootExceptionInfo = CommonExceptionUtils.extractExceptionInfo(e);
         }
@@ -68,13 +70,10 @@ public class AbstractNestedBizException extends Exception implements Traceable, 
         String code = getCode();
         String message = getLocalizedMessage();
 
-        StringBuilder sb = new StringBuilder();
-        sb.append(name + ":");
-
-        sb.append("trace[ " + traceId + " ], ");
-        sb.append("code[ " + code + " ], ");
-        sb.append("msg[ " + message + " ]");
-        return sb.toString();
+        return (name + ":") +
+                "trace[ " + traceId + " ], " +
+                "code[ " + code + " ], " +
+                "msg[ " + message + " ]";
     }
 
     public String getTraceId()
@@ -121,7 +120,7 @@ public class AbstractNestedBizException extends Exception implements Traceable, 
 
     public long getTimestamp()
     {
-        return this.timestamp.longValue();
+        return this.timestamp;
     }
 
 }

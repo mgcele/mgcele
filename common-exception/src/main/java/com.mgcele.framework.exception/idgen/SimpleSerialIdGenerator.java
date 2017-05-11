@@ -41,7 +41,7 @@ public class SimpleSerialIdGenerator implements IdentifierGenerator<Long>{
             if (l >= this.maxValue) {
                 value.set(0L);
             }
-            return Long.valueOf(l);
+            return l;
         }
     }
 

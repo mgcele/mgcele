@@ -29,7 +29,7 @@ public class BaseRTException extends AbstractNestedRuntimeException {
     {
         super(code, cause);
         if (null != messageArgs) {
-            this.messageArgs = ((Object[])messageArgs.clone());
+            this.messageArgs = messageArgs.clone();
         }
     }
 
@@ -42,7 +42,7 @@ public class BaseRTException extends AbstractNestedRuntimeException {
     {
         super(code, logMsg);
         if (null != messageArgs) {
-            this.messageArgs = ((Object[])messageArgs.clone());
+            this.messageArgs = messageArgs.clone();
         }
     }
 
@@ -55,7 +55,7 @@ public class BaseRTException extends AbstractNestedRuntimeException {
     {
         super(code, logMsg, cause);
         if (null != messageArgs) {
-            this.messageArgs = ((Object[])messageArgs.clone());
+            this.messageArgs = messageArgs.clone();
         }
     }
 
@@ -69,7 +69,7 @@ public class BaseRTException extends AbstractNestedRuntimeException {
     {
         super(code, cause);
         if (null != messageArgs) {
-            this.messageArgs = ((Object[])messageArgs.clone());
+            this.messageArgs = messageArgs.clone();
         }
         this.defaultFriendlyMessage = defaultFriendlyMessage;
     }
@@ -84,7 +84,7 @@ public class BaseRTException extends AbstractNestedRuntimeException {
     {
         super(code, logMsg);
         if (null != messageArgs) {
-            this.messageArgs = ((Object[])messageArgs.clone());
+            this.messageArgs = messageArgs.clone();
         }
         this.defaultFriendlyMessage = defaultFriendlyMessage;
     }
@@ -99,7 +99,7 @@ public class BaseRTException extends AbstractNestedRuntimeException {
     {
         super(code, logMsg, cause);
         if (null != messageArgs) {
-            this.messageArgs = ((Object[])messageArgs.clone());
+            this.messageArgs = messageArgs.clone();
         }
         this.defaultFriendlyMessage = defaultFriendlyMessage;
     }
@@ -122,7 +122,7 @@ public class BaseRTException extends AbstractNestedRuntimeException {
     public void setMessageArgs(Object[] messageArgs)
     {
         if (null != messageArgs) {
-            this.messageArgs = ((Object[])messageArgs.clone());
+            this.messageArgs = messageArgs.clone();
         }
     }
 
